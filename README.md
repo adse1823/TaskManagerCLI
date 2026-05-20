@@ -143,3 +143,34 @@ Agents share information through files — not direct conversation:
 
 - [Claude Code Docs](https://docs.claude.com)
 - [Multi-agent coding guide](https://docs.claude.com/en/docs/build-with-claude/agents)
+
+---
+
+## Updates
+
+### v1.1 — `completeTask` + done command
+
+- Added `completeTask(id)` to `taskManager.js` — sets `task.done = true` and persists to disk
+- Exported `completeTask` from `taskManager.js`
+- Added `node index.js done <id>` CLI command to `index.js`
+- Updated `list` output to show ✅ for completed tasks and ⬜ for pending ones
+
+### v1.2 — Local web app
+
+- Added `server.js` — Express server on port 3000 with four REST routes:
+  - `GET /tasks` — return all tasks as JSON
+  - `POST /tasks` — add a task (`{ title }`)
+  - `PATCH /tasks/:id` — mark task done
+  - `DELETE /tasks/:id` — delete a task
+- Created `public/index.html` — single-file web UI (no frameworks, no build step)
+  - Add tasks via text input or Enter key
+  - Check a task to mark it done (crossed out)
+  - Delete button per task
+  - All actions update the page without a full refresh
+- `taskManager.js` and `tasks.json` unchanged — shared by both CLI and web server
+
+To start the web app:
+```bash
+node server.js
+# Open http://localhost:3000
+```

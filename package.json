@@ -1,0 +1,24 @@
+{
+  "name": "taskmanagercli",
+  "version": "1.0.0",
+  "description": "A beginner-friendly project for learning multi-agent coding with Claude Code in VS Code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adse1823/TaskManagerCLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adse1823/TaskManagerCLI/issues"
+  },
+  "homepage": "https://github.com/adse1823/TaskManagerCLI#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
